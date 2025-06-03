@@ -7,8 +7,10 @@
     "start": "react-scripts start"
   },
   "dependencies": {
+    "lucide-react": "^0.511.0",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
+    "react-hot-toast": "^2.5.2",
     "react-scripts": "^5.0.1"
   },
   "browserslist": {
