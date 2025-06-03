@@ -7,7 +7,7 @@ function Home() {
     const [scoreB, setScoreB] = useState(0);
     const [winner, setWinner] = useState(null);
 
-    const HIGH_SCORE = 5;
+    const HIGH_SCORE = 7;
 
     useEffect(() => {
         if (scoreA < HIGH_SCORE && scoreB < HIGH_SCORE) return;
