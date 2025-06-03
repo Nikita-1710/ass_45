@@ -1,22 +1,23 @@
-import React from 'react'
+import { Plus as IconPlus, Minus as IconMinus } from 'lucide-react'
 
-function ScoreCard() {
-  return (
-    <div>
-        <h2>
-
-        </h2>
-
-        <h3>
-
-        </h3>
-
+function ScoreCard({ score, increaseScore, decreaseScore, teamName, winner }) {
+    const isWinner = winner === teamName;
+    return (
         <div>
-            <Minus />
-            <Plus />
+            <h2>
+                {teamName} {isWinner ? "🏆" : ""}
+            </h2>
+
+            <h3>
+                {score}
+            </h3>
+
+            <div>
+                <IconMinus size={60} onClick={decreaseScore} />
+                <IconPlus size={60} onClick={increaseScore}/>
+            </div>
         </div>
-    </div>
-  )
+    )
 }
 
 export default ScoreCard
