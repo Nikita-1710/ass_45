@@ -1,0 +1,1 @@
+import ScoreCard from "../../components/ScoreCard"
