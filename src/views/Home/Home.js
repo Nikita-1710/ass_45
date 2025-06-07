@@ -23,6 +23,14 @@ function Home() {
         }
     }, [scoreA, scoreB]);
 
+    const handleDecreaseA = () => {
+        if (scoreA > 0) setScoreA(scoreA - 1);
+    };
+
+    const handleDecreaseB = () => {
+        if (scoreB > 0) setScoreB(scoreB - 1);
+    };
+
     return (
         <div className="min-h-screen bg-gray-100 p-6">
             <h1 className="text-4xl font-bold text-center my-12">Score Board</h1>
@@ -32,14 +40,14 @@ function Home() {
                     score={scoreA}
                     teamName="Team A"
                     increaseScore={() => setScoreA(scoreA + 1)}
-                    decreaseScore={() => setScoreA(scoreA - 1)}
+                    decreaseScore={handleDecreaseA}
                     winner={winner}
                 />
                 <ScoreCard
                     score={scoreB}
                     teamName="Team B"
                     increaseScore={() => setScoreB(scoreB + 1)}
-                    decreaseScore={() => setScoreB(scoreB - 1)}
+                    decreaseScore={handleDecreaseB}
                     winner={winner}
                 />
             </div>
